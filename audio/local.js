@@ -1,7 +1,7 @@
 /* CONSTANTES */
 
 //1
-const inputAudio = document.getElementById("inputAudio");
+const inputAudio = document.getElementById('inputAudio');
 
 /**
  * Event quand on ajoute un fichier à l'inputAudio

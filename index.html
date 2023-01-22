@@ -3,12 +3,30 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Rond qui bouge</title>
+
+		<!-- Styles -->
 		<link rel="stylesheet" href="index.css">
 	</head>
 	<body>
-		<input id="inputAudio" type="file" accept=".mp3">
-		<canvas id="canvas">Canvas ne marche pas sur votre navigateur</canvas>
-		<script src="cilinder.js"></script>
-		<script src="audio.js"></script>
+		<div id="page">
+			<div id="menu" class="active">
+				<p>Choisissez un mp3 :</p>
+				<label>
+					<input id="inputAudio" type="file" accept=".mp3">
+					<p>local</p>
+				</label>
+				<button id="buttontAudio">
+					<p>defaut</p>
+				</button>
+			</div>
+			<div id="content">
+				<canvas id="canvas">Canvas ne marche pas sur votre navigateur</canvas>
+			</div>
+		</div>
+
+		<!-- Scripts -->
+		<script src="./audio/global.js"></script>
+		<script src="./audio/local.js"></script>
+		<script src="./audio.js"></script>
 	</body>
 </html>
