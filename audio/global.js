@@ -2,12 +2,15 @@
 
 //1
 const buttontAudio = document.getElementById('buttontAudio');
-const MUSIC_URL = "./song/song.mp3";
+const MUSIC_URL = "https://raw.githubusercontent.com/seb3x97/AudioAnalyser/main/song/song.mp3";
 
 /**
  * Event quand on appuie sur le bouton
  */
 buttontAudio.addEventListener('click', function() {
+    //On affiche le cylindre
+    showCylinder();
+    
     //On instancie l'envoi de la requête
     const xmlHTTP = new XMLHttpRequest();
 

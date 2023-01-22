@@ -7,6 +7,9 @@ const inputAudio = document.getElementById('inputAudio');
  * Event quand on ajoute un fichier à l'inputAudio
  */
 inputAudio.addEventListener('change', function() {
+    //On affiche le cylindre
+    showCylinder();
+
     //On récupére le buffer
     const reader = new FileReader();
     reader.onload = function() {

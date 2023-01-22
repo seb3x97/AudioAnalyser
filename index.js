@@ -36,14 +36,10 @@ const ctx = document.getElementById('canvas').getContext('2d');
 const actx = new VALUES.AUDIO_CONTEXT();
 
 //2
-const DEBUG = false;
-const MUSIC_URL = "http://185.216.25.178:4367/mp3/-T9i9dtLKKM";
-
-//3
 const analyser = actx.createAnalyser();           //Element pour l'analyse
 const gainNode = actx.createGain();               //Element pour le volume
 
-//4
+//3
 const VOLUME = 0.5;
 
 /* VARIABLES */
@@ -120,6 +116,14 @@ function onLoadEvent() {
 */
 function average(array) {
     return array.reduce((a, b) => a + b) / array.length;
+};
+
+/**
+ * On affiche le cylindre
+ */
+function showCylinder() {
+    document.getElementById("menu").classList.remove('active');
+    document.getElementById("content").classList.add('active');
 };
 //#endregion
 
