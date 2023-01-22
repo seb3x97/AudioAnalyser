@@ -70,9 +70,6 @@ let pausedAt = null;                //Temps quand on a fait une pause
 //1
 window.onresize = onResizeEvent;          //Event quand on redimensionne la fenêtre
 
-//2
-window.onload = onLoadEvent;              //Event quand on charge la page
-
 /**
  * Quand on redimensionne la fenêtre
  */
@@ -92,18 +89,6 @@ function onResizeEvent() {
 
     //On redimensionne la sphère
     Sphere.getInstance().resize();
-};
-
-/**
- * Event quand on charge la page
- * @returns void
- */
-function onLoadEvent() {
-    //Si l'audio context n'est pas supporté
-    if (!VALUES.AUDIO_CONTEXT) return;
-
-    //On resize
-    onResizeEvent();
 };
 //#endregion
 
@@ -226,6 +211,9 @@ function pauseAudio() {
  * On initialise l'audio
  */
 function initAudio(buffer) {
+    //On resize
+    onResizeEvent();
+    
     //On enregistre l'audio buffer (les données de la musique)
     audioBuffer = buffer;
 
