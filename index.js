@@ -32,7 +32,9 @@ const VALUES = {
 };
 
 //1
-const ctx = document.getElementById('canvas').getContext('2d');
+const canvas = document.getElementById('canvas');
+const parent = canvas.parentElement;
+const ctx = canvas.getContext('2d');
 const actx = new VALUES.AUDIO_CONTEXT();
 
 //2
@@ -75,8 +77,8 @@ window.onresize = onResizeEvent;          //Event quand on redimensionne la fen�
  */
 function onResizeEvent() {
     //On change les valeurs (widht, height, moitié de width et moitié de height)
-    w = window.innerWidth;
-    h = window.innerHeight;
+    w = parent.offsetWidth;
+    h = parent.offsetHeight;
     dx = w / 2;
     dy = h / 2;
 
