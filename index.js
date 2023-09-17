@@ -27,7 +27,7 @@ const VALUES = {
 
     //Global
     AUDIO_CONTEXT: (AudioContext || window.AudioContext || window.webkitAudioContext),              //On récupére l'audioContext (dépends du navigateur)
-    FREQUENCY_HIGHT_POINT: 90,       //Point où l'on concidère que la fréquence est haute
+    FREQUENCY_HIGHT_POINT: 3,       //Point où l'on concidère que la fréquence est haute
     FFTSIZE: 2048,                  //Influe sur le nombre de donnéese reçues. Doit être une puissance de 2 non nulle située dans l'intervalle compris entre 32 et 32768. Valeur par défaut est [2048] (https://developer.mozilla.org/fr/docs/Web/API/AnalyserNode/fftSize)
 };
 
